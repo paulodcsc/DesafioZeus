@@ -1,6 +1,6 @@
 <!DOCTYPE html>
     <head>
-        <title>Desafio Zeus - Registros</title>
+        <title>Projeto Zeus - Registros</title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
@@ -23,16 +23,21 @@
         <div id="room" class="content">
             <header>
                 <a href="/">
-                    <img src="/images/logo.svg" alt="Zeus Logo"/>
-                </a>
+                <img src="/images/logo.svg" alt="Zeus Logo"/>
+                <div class="buttons">
+                        <div class="button outlined" id="room-id" data-id="<%= roomId %>">
+                            Sair
+                        </a>
+                    </div>
+                </div>
             </header>
 
             <main>
                 <section id="question-form">
-                    <h2>O que você comprou?</h2>
+                    <h2>Registre aqui...</h2>
                     <form action="/question/create/<%= roomId %>" method="POST">
-                        <label class="sr-only" for-id="question">Seus registros</label>
-                        <textarea name="question" id="question" placeholder="Ex: 2kg de ração por R$70,00"></textarea>
+                        <label class="sr-only" for-id="question">Registre as compras</label>
+                        <textarea name="question" id="question" placeholder="Ex: 2kg de ração por R$90,00"></textarea>
 
                         <footer>
                             <button>Enviar</button>
@@ -96,8 +101,8 @@
         <!----- MODAL ------>
         <div class="modal-wrapper">
             <div class="modal">
-                <h2>Excluir registro</h2>
-                <p>Tem certeza que você deseja excluir este registro?</p>
+                <h2>Excluir Registro</h2>
+                <p>Tem certeza que você deseja excluir esse registro</p>
 
                 <form action="#" method="POST">
                     <label class="sr-only" for-id="password">Digite sua senha</label>
